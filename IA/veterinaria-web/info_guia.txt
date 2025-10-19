@@ -1,0 +1,158 @@
+Promt: 
+Crea una página web completa desde cero sobre una Veterinaria, usando solo HTML, CSS (en archivo externo) y JavaScript (en archivo externo). Explica la estructura del proyecto y qué hace cada archivo. Agrega una interacción simple con JavaScript (por ejemplo, un botón que cambie el color de fondo del sitio). Selecciona una paleta de colores y fuente que combinen con el tema de una veterinaria. Muestra el código de los archivos index.html, style.css y script.js, y explica cómo abrir el proyecto en un navegador
+
+Resultado: 
+
+🗂️ Estructura del Proyecto
+
+Supongamos que tienes una carpeta llamada veterinaria-web. Dentro de ella, tendrás tres archivos:
+
+veterinaria-web/
+├── index.html     <-- Estructura de la página
+├── style.css      <-- Estilos visuales (colores, fuentes, diseño)
+└── script.js      <-- Interacción con JavaScript
+
+🎨 Paleta de Colores y Fuente
+Paleta de colores amigable para una veterinaria:
+
+Verde claro: #a8e6cf → transmite naturaleza, salud.
+
+Azul suave: #dcedc1 → frescura y limpieza.
+
+Blanco: #ffffff → claridad y profesionalismo.
+
+Gris oscuro: #333333 → contraste para textos.
+
+Fuente recomendada:
+
+Google Fonts: 'Poppins', sans-serif → moderna, legible y amigable.
+
+✅ Interacción con JavaScript
+
+Un botón que al hacer clic cambia el color de fondo del sitio web.
+
+📄 Código de los Archivos
+1. index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veterinaria Patitas Felices</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Veterinaria Patitas Felices</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bienvenida">
+      <h2>¡Cuidamos de tus mejores amigos!</h2>
+      <p>En nuestra clínica, ofrecemos atención médica, vacunación y cariño para tus mascotas.</p>
+      <button id="cambiarColorBtn">Cambiar color de fondo</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Veterinaria Patitas Felices. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+2. style.css
+/* Fuente general */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #a8e6cf;
+  color: #333333;
+}
+
+/* Encabezado */
+header {
+  background-color: #dcedc1;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+}
+
+/* Sección bienvenida */
+.bienvenida {
+  padding: 40px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #dcedc1;
+}
+
+/* Footer */
+footer {
+  background-color: #dcedc1;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+3. script.js
+// Script para cambiar el color de fondo al hacer clic en el botón
+
+const boton = document.getElementById('cambiarColorBtn');
+
+boton.addEventListener('click', () => {
+  const colores = ['#a8e6cf', '#dcedc1', '#ffffff', '#f0f9e8'];
+  // Elegir un color aleatorio
+  const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+  document.body.style.backgroundColor = colorAleatorio;
+});
+
+🚀 Cómo Abrir el Proyecto en el Navegador
+
+Crea una carpeta en tu computadora y nómbrala veterinaria-web.
+
+Copia los tres archivos (index.html, style.css y script.js) dentro de esa carpeta.
+
+Haz doble clic en el archivo index.html → esto abrirá la página en tu navegador predeterminado.
+
+Haz clic en el botón "Cambiar color de fondo" para ver la interacción.

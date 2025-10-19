@@ -1,0 +1,278 @@
+/*
+1. Selector de elemento (selector de etiqueta)
+Solo requiere que se indique cual es la etiqueta HTML que se desea aplicar con diseno
+
+	body{
+	}
+	h1{
+	}
+	h2{
+	}
+	p{
+	}
+
+2.Selector de clase(inicia con un punto)
+Mayoria de frameworks usan este tipo de Selector
+Que al inicio de la etiqueta/selector en CSS inicia con un punto, es una selector de clase
+Los selectores de clase son de su propia imaginacion
+	CSS: 
+		.Titulo()
+		.Cuerpo()
+		.Ficha()
+		
+	HTML:
+		<p class="cuerpo"> texto que aparece en pantalla
+		</p>
+	Debe ser el mismo que se puso en HTML y en CSS
+
+3. Selector ID (se antepone el #)
+-Cuando se asigna/relaciona con un ID unico a una etiqueta/elemento HTML
+	CSS: 
+		#Titulo()
+		#Cuerpo()
+		#Ficha()
+		
+	HTML:
+		<p id="cuerpo"> texto que aparece en pantalla
+		</p>
+	Debe ser el mismo que se puso en HTML y en CSS
+	
+	Diferencias:
+		-Solo un 
+
+4. Selector combinado ( donde especifica la etiqueta HTML por niveles)
+	Aplicar el estilo a la etiqueta especifica que esta dentro de otra etiqueta principal
+	1. ol -- background: green
+	1, aplique el estilo a la etiqueta h3 que solo presentan los titulos de las listas
+	Aplicar el estilo solo a los elementos de la lista.
+	CSS:
+		div h3{
+			background: green;
+		}
+	HTLM:
+		<body>
+			<h3>Practica de lista</h3>
+			<div> texto que aparece en pantalla
+				<h3>Listas ordenadas</h3>
+				<ol>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+				<h4>Listas no ordenadas</h4>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h3>Listas no ordenadas</h3>
+				<h3>Listas no ordenadas</h3>
+				<h3>Listas no ordenadas</h3>
+				<h3>Listas no ordenadas</h3>
+				<h3>Listas no ordenadas</h3>
+				
+			</div>
+		</body>
+
+1. Selector de etiqueta
+2. Selector de clase
+
+---------------------------------------------
+=============================================
+
+Ejercicio:
+
+	1. Yo quiero que en mi pagina web en todos lugares donde tengo etiquetas <p> se aplique el mismo formato:
+	
+	opcion1: selector de elemento, 2: Selector de clase
+	
+	2. Solo en las etiquetas p que estan en el body de la pagina web 
+	opcion1: selector de clase, 2: selector de ID
+			 Crear la clase y asignarlas a las etiquetas que solo estan en el body
+			 
+	3. Solo en las etiquetas p que reprenten  definiciones de conceptos
+	opcion1: 1 selector id
+	
+---------------------------------------------
+=============================================
+1. Box Model - Modelo de cajas
+
+- Todo elemento HTML se representa como una caja 
+	Texto para escribir el nombre
+	Boton para presionar 
+	Imagen
+	Lista
+	
+1.- content - contenido
+2.- padding - Relleno interno
+3.- border - Border del elemento
+4.- margin - Espacio interno
+
+-Sirve para controlar el Espacio y el tamano que ocupa cada elemento
+
++---------------------------+
+|							| Espacio fuera del borde, El Espacio entre cajas y cajas
+|		Margin				|
+|+--------------------------+
+|							|
+|		Border				| Linea que rodea el Padding
+|							|
+|+--------------------------+
+|							|
+|		Padding				|  Espacio entre el contenido y el borde
+||+-------------------------+	
+|||							|
+|||		 Content			| El contenido real (text, img, btn, otros)
+|||							|
+|+--------------------------+
+
+
+.caja{
+	width: 300px;
+	Padding: 20px; 
+	Border: 5px solid black;
+	Margin: 0px; 
+ }
+
+Ancho de una pagina: %, px
+Recomendacion: No siempre hay que forzar a que sea una sola medida
+
+
+  20%                   40%
+10%|----------|10%10%  |------------------	10%
+10%|		  |10%10%  |	              | 10%
+10%|		  |10%10%  |      	          | 10%
+10%|		  |10%10%  |		          | 10%      
+10%|----------         -------------------
+
+---------------------------------------------
+=============================================
+display: define como debe de comportarse un elemento dentro de la pagina.
+	- Da instrucciones al navegador sobre el elemento y los demas elementos.
+	-Display es la propiedad
+	-Valor no son numeros o valores aleatorios, los valores que se pueden asignar a un display son valores predefinidos.
+	
+display: 
+	-block: ocupa toda la Linea
+	-inline: lo presenta todo en la misma Linea
+	-inline-block: lo mismo en Ancho y alto --Aplica a bottones, icon
+	-none; Oculta el elemento.
+	-flex: contenedor que se vuelve flexible;
+	-grid: cuadriculas
+	-table: simula ser una tabla
+
+Propiedad box-shadow: sombra 
+	parametros:
+	1.-Desplazamiento horizontal - hacia los lados
+	2.-Desplazamiento horizontal - hacia bajo
+	3.-difuminado - la expacion de la sombre
+	4.-rgba(0,0,0,0.2) -color de la sombra en los colores primarios
+	
+	valores:
+	
+	div{
+		box-ahadow: 0,5px, 10px, (0,0,0,0.2)
+	}
+	
+propiedad sticky: definir comportamiento del elemento, puede ser: fijo o estatico
+
+		position:sticky
+Propiedad: 
+ Top: valor para la parte superior
+ Right: valor que se asigna a la derecha 
+ button: valor que se asigna en la parte inferior
+ left: valor que se asigna a la parte inferior
+ 
+.CajaTexto{
+	box-shadow: 0,5px, 10px, (0,0,0,0.2)
+	position: sticky;
+	top:0;
+	right:0;
+}
+
+Propiedad z-index: Nos permite posicionar el elemento por encima de los demas (capas)
+	.CajaTexto{
+	box-shadow: 0,5px, 10px, (0,0,0,0.2)
+	position: sticky;
+	top:0;
+	right:0;
+}
+	
+
+*/
+
+
+/*Reset basico*/
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bbh-sans-bogle-regular {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body{
+	font-family: 'comic sans ms', 'Montserrat','sans-serif';
+	background: linear-gradient(135deg, #eef2f3 0%, #d9e4ec 100%);
+	color: #333;
+	line-height: 1.6;
+}
+
+header{
+      background: #000080;
+	  color: white;
+	  padding: 15px;
+	  box-shadow: 0, 5px, 10px, rgba(0,0,0,0,2);
+	  position: sticky;
+	  top: 0px;
+	  z-index: 100;
+}
+
+header nav a{
+	color: white;
+}
+/*
+p{
+	background: gray;
+}
+
+.cuerpo{
+	background: white;
+}
+
+#cuerpo{
+	background: green;
+}
+*/
+
+nav{
+	Margin 0;
+	Padding:5px;
+}
+
+
+
+.cajas{
+	width: 300px;
+	padding: 10px;
+	border: 5px solid blue;
+	margin: 20px;
+}
+
+
+.cajas2{
+	display:inline-block;
+	background: yellow;
+}
+
+main{
+	max-width: 90%;
+	margin: 50px;
+	padding: 0px:
+}
